@@ -30,5 +30,4 @@ jobs:
         with:
           ocaml-version: ${{ matrix.ocaml-version }}
       - run: opam install dune base64.${{ matrix.lib-version }}
-      - run: eval $(opam env)
       - run: dune exec ./test.exe
